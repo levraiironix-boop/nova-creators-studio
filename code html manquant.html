@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nova Creators Studio Pro</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/quill@2.0.2/dist/quill.snow.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">✨ Nova Creators Studio <span class="badge">PRO</span></div>
+        <div id="connection-status" class="status-ok">● Connecté en duo</div>
+    </header>
+    <div class="workspace">
+        <section class="panel script-section">
+            <div class="panel-header">
+                <h3>📝 Éditeur de Script Collaboratif</h3>
+            </div>
+            <div id="editor-container"></div>
+        </section>
+        <section class="panel video-section">
+            <div class="top-video-layout">
+                <div class="media-pool">
+                    <h4>🗂️ Chutier (Médias)</h4>
+                    <input type="file" id="media-upload" accept="video/*" multiple>
+                    <div id="media-list" class="media-list"></div>
+                </div>
+                <div class="monitor">
+                    <video id="main-preview" controls></video>
+                </div>
+            </div>
+            <div class="timeline-area">
+                <div class="track" id="v-track-1">Piste Vidéo</div>
+            </div>
+        </section>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/quill@2.0.2/dist/quill.js"></script>
+    <script src="client.js"></script>
+</body>
+</html>

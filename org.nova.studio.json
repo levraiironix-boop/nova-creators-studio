@@ -1,0 +1,31 @@
+{
+    "app-id": "org.nova.studio",
+    "runtime": "org.freedesktop.Platform",
+    "runtime-version": "23.08",
+    "sdk": "org.freedesktop.Sdk",
+    "command": "nova-studio",
+    "modules": [
+        {
+            "name": "node",
+            "buildsystem": "simple",
+            "build-commands": [
+                "npm install",
+                "cp -r * /app/"
+            ],
+            "sources": [
+                {
+                    "type": "dir",
+                    "path": "."
+                }
+            ]
+        }
+    ],
+    "finish-args": [
+        "--share=network",
+        "--share=ipc",
+        "--socket=x11",
+        "--socket=wayland",
+        "--device=dri",
+        "--filesystem=host"
+    ]
+}
